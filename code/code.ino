@@ -32,7 +32,7 @@ void setup()
   pinMode(Spraying_Pin, OUTPUT);
   pinMode(Light_Pin, OUTPUT);
   digitalWrite(Spraying_Pin, LOW);
-  digitalWrite(Light_Pin, LOW);
+  digitalWrite(Light_Pin, LOW);//
 }
 
 void loop()
