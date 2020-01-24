@@ -39,11 +39,13 @@ void loop()
 {
   PersonValue = digitalRead(Pir_sensor);
   sensorValue = analogRead(Bright_sensor);
+  unsigned long currentMillis = millis();
   if (PersonValue == 1)
   {
     PersonCome(true);
+    previousMillis = currentMillis;
   }
-  unsigned long currentMillis = millis();
+  
   if (currentMillis - previousMillis >= interval)
   {
     PersonCome(false);
